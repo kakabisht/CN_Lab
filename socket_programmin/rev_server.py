@@ -10,7 +10,7 @@ while True:
     rcvdData = c.recv(1024).decode()
     print ("Recieved data:",rcvdData)
     sendData = rcvdData[::-1]
-    print ("Sending data:",rcvdData)
+    print ("Sending data:",sendData)
     c.send(sendData.encode())
     if(sendData == "C" or sendData == "c"):
         break
